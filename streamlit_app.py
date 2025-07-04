@@ -18,16 +18,16 @@ Welcome! This Streamlit app lets you explore and visualize salary data. You can 
 
 
 # File uploader for flexibility
-st.markdown("**Step 1: Upload your Salary Data CSV file (or use the default dataset)**")
-uploaded_file = st.file_uploader("Upload Salary Data CSV", type=["csv"])
-if uploaded_file is not None:
-    df = pd.read_csv(uploaded_file)
-    st.success("File uploaded successfully!")
-else:
-    df = pd.read_csv("./Salary_Data.csv")
-    st.info("Using default Salary_Data.csv from the project folder.")
+# st.markdown("**Step 1: Upload your Salary Data CSV file (or use the default dataset)**")
+# uploaded_file = st.file_uploader("Upload Salary Data CSV", type=["csv"])
+# if uploaded_file is not None:
+#     df = pd.read_csv(uploaded_file)
+#     st.success("File uploaded successfully!")
+# else:
+#     df = pd.read_csv("./Salary_Data.csv")
+#     st.info("Using default Salary_Data.csv from the project folder.")
 
-
+df = pd.read_csv(uploaded_file)
 # Exploratory Data Analysis Section
 st.header("Exploratory Data Analysis")
 st.write("Let's take a look at the data and perform some basic cleaning and exploration.")
