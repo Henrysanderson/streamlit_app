@@ -27,7 +27,7 @@ Welcome! This Streamlit app lets you explore and visualize salary data. You can 
 #     df = pd.read_csv("./Salary_Data.csv")
 #     st.info("Using default Salary_Data.csv from the project folder.")
 
-df = pd.read_csv(uploaded_file)
+df = pd.read_csv("./Salary_Data.csv")
 # Exploratory Data Analysis Section
 st.header("Exploratory Data Analysis")
 st.write("Let's take a look at the data and perform some basic cleaning and exploration.")
