@@ -8,7 +8,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-
+import os
 
 # App Title
 st.title("Streamit App Project")
@@ -27,7 +27,10 @@ Welcome! This Streamlit app lets you explore and visualize salary data. You can 
 #     df = pd.read_csv("./Salary_Data.csv")
 #     st.info("Using default Salary_Data.csv from the project folder.")
 
-df = pd.read_csv("./Salary_Data.csv")
+
+file_path = os.path.join(os.path.dirname(__file__), "Salary_Data.csv")
+df = pd.read_csv(file_path)
+
 # Exploratory Data Analysis Section
 st.header("Exploratory Data Analysis")
 st.write("Let's take a look at the data and perform some basic cleaning and exploration.")
